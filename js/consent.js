@@ -20,10 +20,12 @@ function getDelegatedLogin() {
  *
  */
 function hideLogins() {
-	const mainTags = document.getElementsByTagName('main')
-	if (mainTags !== null) {
-		mainTags[0].style.visibility = 'hidden'
-	}
+    const wrapper = document.querySelector('.wrapper');
+    if (!wrapper) return;
+
+    Array.from(wrapper.children).forEach(child => {
+        child.style.visibility = 'hidden';
+    });
 }
 
 /**
